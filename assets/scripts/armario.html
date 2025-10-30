@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos - ARKAS</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <img src="../images/logo_blanco.png" alt="Logo" class="imagen_logo" width="200" />
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar eventos, conciertos, conferencias..." />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">TODO</a></li>
+                <li><a href="musica.html">MUSICA</a></li>
+                <li><a href="deportes.html">DEPORTES</a></li>
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li class="active"><a href="armario.html">ARMARIO</a></li>
+                <li><a href="empresas.html">EMPRESAS</a></li>
+                <li><a href="disenadores.html">DISEÑADORES</a></li>
+                <li><a href="influencers.html">INFLUENCERS</a></li>
+                <li><a href="poker.html">POKER</a></li>
+                <li><a href="novedades.html">NOVEDADES</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-filter"><i class="fas fa-filter"></i> Filtrar</button>
+                <button class="btn-sort"><i class="fas fa-sort"></i> Ordenar</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Filtros de Eventos -->
+    <section class="events-filters">
+        <div class="container filters-container">
+            <div class="filter-group">
+                <select class="filter-select">
+                    <option value="">Todas las categorías</option>
+                    <option value="musica">Música</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="conferencias">Conferencias</option>
+                    <option value="arte">Arte y Cultura</option>
+                    <option value="gastronomia">Gastronomía</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Cualquier fecha</option>
+                    <option value="hoy">Hoy</option>
+                    <option value="semana">Esta semana</option>
+                    <option value="mes">Este mes</option>
+                    <option value="futuro">Próximamente</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Cualquier ubicación</option>
+                    <option value="local">Local</option>
+                    <option value="nacional">Nacional</option>
+                    <option value="internacional">Internacional</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <button class="btn-filter">
+                    <i class="fas fa-map-marker-alt"></i> Cerca de mí
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Eventos -->
+    <section class="events-section" id="events">
+        <div class="container">
+            <h2 class="section-title">ARMARIO DE (ID)</h2>
+            <div class="events-grid">
+                <!-- Evento 1 -->
+                <div class="event-card">
+                    <div class="event-img" style="
+                background-image: url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Jun</span>
+                            <span class="year">24</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Concierto</span>
+                        <h3>Festival de Verano 2023</h3>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Parque Central, Ciudad</span>
+                        </div>
+                        <p class="event-description">
+                            El festival más esperado del año con artistas nacionales e
+                            internacionales. 12 horas de música en vivo.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-price">$45.00</div>
+                            <button class="btn-event">Comprar Entradas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="event-card">
+                    <div class="event-img" style="
+                background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Jun</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Conferencia</span>
+                        <h3>Innovación Digital 2023</h3>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Centro de Convenciones</span>
+                        </div>
+                        <p class="event-description">
+                            Conferencia sobre las últimas tendencias en tecnología y
+                            digitalización para empresas y emprendedores.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-price">$120.00</div>
+                            <button class="btn-event">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 3 -->
+                <div class="event-card">
+                    <div class="event-img" style="
+                background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                        <div class="event-date">
+                            <span class="day">30</span>
+                            <span class="month">Jun</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Deportes</span>
+                        <h3>Maratón Urbano</h3>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Centro Histórico</span>
+                        </div>
+                        <p class="event-description">
+                            Participa en la maratón anual por las calles del centro
+                            histórico. 5K, 10K y media maratón disponibles.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-price">$25.00</div>
+                            <button class="btn-event">Inscribirse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eventos Destacados -->
+    <section class="featured-events">
+        <div class="container">
+            <h2 class="section-title">Eventos Destacados</h2>
+            <div class="featured-events-grid">
+                <!-- Evento Destacado 1 -->
+                <div class="featured-event-card">
+                    <div class="featured-badge">Destacado</div>
+                    <div class="featured-event-img" style="
+                background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+              "></div>
+                    <div class="featured-event-content">
+                        <h3>Gala de Premios ARKAS</h3>
+                        <p>
+                            La noche más esperada del año donde reconocemos a los mejores
+                            artistas y creadores de la industria.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-price">$150.00</div>
+                            <button class="btn-event">Comprar Entradas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Destacado 2 -->
+                <div class="featured-event-card">
+                    <div class="featured-badge">Agotándose</div>
+                    <div class="featured-event-img" style="
+                background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+              "></div>
+                    <div class="featured-event-content">
+                        <h3>Exposición de Arte Contemporáneo</h3>
+                        <p>
+                            Descubre las obras más innovadoras de artistas emergentes en
+                            esta exposición única.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-price">$35.00</div>
+                            <button class="btn-event">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Destacado 3 -->
+                <div class="featured-event-card">
+                    <div class="featured-badge">Nuevo</div>
+                    <div class="featured-event-img" style="
+                background-image: url('https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+                "></div>
+                    <div class="featured-event-content">
+                        <h3>Festival Gastronómico Internacional</h3>
+                        <p>
+                            Sabores de todo el mundo en un solo lugar. Degustaciones,
+                            talleres y competencias culinarias.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-price">$60.00</div>
+                            <button class="btn-event">Comprar Entradas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ARKAS</h3>
+                    <p>
+                        Tu destino para moda, música, deportes y eventos exclusivos.
+                        Conectamos a los fans con sus pasiones.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorías de Eventos</h3>
+                    <ul>
+                        <li><a href="#">Conciertos</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Conferencias</a></li>
+                        <li><a href="#">Arte y Cultura</a></li>
+                        <li><a href="#">Gastronomía</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Eventos Próximos</a></li>
+                        <li><a href="#">Eventos Pasados</a></li>
+                        <li><a href="#">Crear Evento</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> Calle Principal 123,
+                            Ciudad
+                        </li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> eventos@arkas.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ARKAS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
