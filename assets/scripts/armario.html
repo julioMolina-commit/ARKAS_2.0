@@ -7,6 +7,98 @@
     <title>Eventos - ARKAS</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* Estilos adicionales para mejorar la funcionalidad de diseño de prendas */
+        .image-upload-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 2rem;
+            border-radius: 10px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+            border: 2px dashed #aaa;
+        }
+
+        .image-upload-container:hover {
+            border-color: #1a2a6c;
+            background: #e9e9e9;
+        }
+
+        .image-upload-text {
+            color: #555;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #prendaPreview {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #imageUpload {
+            display: none;
+        }
+
+        .price-input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        #priceInput {
+            font-size: 1.4rem;
+            width: 100px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .price-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .price-buttons button {
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .garment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px 0;
+        }
+
+        .garment-modal-content {
+            max-width: 950px;
+            width: 100%;
+            margin: auto;
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 
 <body>
@@ -31,7 +123,7 @@
         <div class="container nav-container">
             <ul class="main-nav">
                 <li><a href="index.html">TODO</a></li>
-                <li><a href="musica.html">MUSICA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
                 <li><a href="deportes.html">DEPORTES</a></li>
                 <li><a href="eventos.html">EVENTOS</a></li>
                 <li class="active"><a href="armario.html">ARMARIO</a></li>
@@ -47,6 +139,7 @@
             </div>
         </div>
     </nav>
+
     <!-- Filtros de Eventos -->
     <section class="events-filters">
         <div class="container filters-container">
@@ -88,8 +181,7 @@
             <div class="events-grid">
                 <!-- Evento 1 -->
                 <div class="event-card">
-                    <div class="event-img" style="
-                background-image: url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                    <div class="event-img" style="background-image: url(../images/cami1.jpg)">
                         <div class="event-date">
                             <span class="day">15</span>
                             <span class="month">Jun</span>
@@ -97,17 +189,15 @@
                         </div>
                     </div>
                     <div class="event-content">
-                        <span class="event-category">Concierto</span>
-                        <h3>Festival de Verano 2023</h3>
+                        <h3>Arkas White</h3>
+                        <span class="event-category"><i class="fas fa-zap"></i> 6 Top Nov</span>
                         <div class="event-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Parque Central, Ciudad</span>
+                            <i class="fas fa-air-freshener"></i>
+                            <span>APPARKAS</span>
                         </div>
-                        <p class="event-description">
-                            El festival más esperado del año con artistas nacionales e
-                            internacionales. 12 horas de música en vivo.
-                        </p>
                         <div class="event-footer">
+                            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
                             <div class="event-price">$45.00</div>
                             <button class="btn-event">Comprar Entradas</button>
                         </div>
@@ -116,24 +206,19 @@
 
                 <!-- Evento 2 -->
                 <div class="event-card">
-                    <div class="event-img" style="
-                background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');">
+                    <div class="event-img" style="background-image: url(../images/cami2.jpg)">
                         <div class="event-date">
                             <span class="day">22</span>
                             <span class="month">Jun</span>
                         </div>
                     </div>
                     <div class="event-content">
-                        <span class="event-category">Conferencia</span>
+                        <span class="event-category"><i class="fas fa-zap"></i>3 Top Nov</span>
                         <h3>Innovación Digital 2023</h3>
                         <div class="event-location">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-air-freshener"></i>
                             <span>Centro de Convenciones</span>
                         </div>
-                        <p class="event-description">
-                            Conferencia sobre las últimas tendencias en tecnología y
-                            digitalización para empresas y emprendedores.
-                        </p>
                         <div class="event-footer">
                             <div class="event-price">$120.00</div>
                             <button class="btn-event">Reservar</button>
@@ -143,24 +228,19 @@
 
                 <!-- Evento 3 -->
                 <div class="event-card">
-                    <div class="event-img" style="
-                background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                    <div class="event-img" style="background-image: url(../images/cami3.png)">
                         <div class="event-date">
                             <span class="day">30</span>
                             <span class="month">Jun</span>
                         </div>
                     </div>
                     <div class="event-content">
-                        <span class="event-category">Deportes</span>
+                        <span class="event-category"><i class="fas fa-zap"></i>1 Top Nov</span>
                         <h3>Maratón Urbano</h3>
                         <div class="event-location">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-air-freshener"></i>
                             <span>Centro Histórico</span>
                         </div>
-                        <p class="event-description">
-                            Participa en la maratón anual por las calles del centro
-                            histórico. 5K, 10K y media maratón disponibles.
-                        </p>
                         <div class="event-footer">
                             <div class="event-price">$25.00</div>
                             <button class="btn-event">Inscribirse</button>
@@ -171,6 +251,146 @@
         </div>
     </section>
 
+    <!-- Sección Creación de Prenda -->
+    <section class="garment-creation">
+        <div class="container">
+            <h2 class="section-title">CREA TU PRENDA ÚNICA</h2>
+            <button class="create-garment-btn" id="openGarmentModal">
+                <i class="fas fa-plus-circle"></i> CREAR PRENDA PERSONALIZADA
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal de Creación de Prenda -->
+    <div class="garment-modal" id="garmentModal">
+        <div class="garment-modal-content">
+            <span id="closeGarmentModal"
+                style="position:absolute;top:15px;right:20px;font-size:24px;cursor:pointer;">&times;</span>
+            <h2 style="text-align:center;margin-bottom:1.5rem;">DISEÑA TU PRENDA</h2>
+
+            <div style="text-align:center;">
+                <!-- Nombre del artista -->
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+                    <div style="font-weight:bold;font-size:1.2rem;">Nombre del Artista</div>
+                    <button id="addCollabBtn"
+                        style="background:#1a2a6c;color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer;">+</button>
+                </div>
+
+                <!-- Caja de colaboraciones -->
+                <div id="collabBox"
+                    style="display:none;background:#f8f8f8;border-radius:10px;padding:1rem;margin:1rem auto;width:80%;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+                    <h3 style="margin-top:0;">Colaboraciones</h3>
+                    <input type="text" placeholder="Buscar colaborador..."
+                        style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:1px solid #ccc;">
+                    <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Juan
+                                Pérez</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Ana
+                                López</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Carlos
+                                Gómez</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Lucía
+                                Fernández</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Pedro
+                                Sánchez</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nombre de la prenda editable -->
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+                    <input id="garmentName" type="text" value="Nombre de la Prenda"
+                        style="font-size:1rem;padding:0.3rem 0.5rem;border-radius:6px;border:1px solid #aaa;width:250px;text-align:center;">
+                    <i style="cursor:pointer;font-size:1.2rem;">✏️</i>
+                </div>
+
+                <hr style="margin:1rem 0;">
+
+                <!-- Caja gris oscura con los 4 círculos en las esquinas -->
+                <div style="width:100%;height:300px;position:relative;background:black;border-radius:15px;margin-bottom:2rem;
+                background-image:
+                linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+                linear-gradient(45deg, rgba(255,255,255,0.15), rgba(255,255,255,0.15));">
+                    <!-- Círculos en esquinas -->
+                    <div id="corner1"
+                        style="width:70px;height:70px;border-radius:50%;background:#1a2a6c;position:absolute;top:15px;left:15px;border:3px solid white;">
+                    </div>
+                    <div id="corner2"
+                        style="width:70px;height:70px;border-radius:50%;background:#b21f1f;position:absolute;top:15px;right:15px;border:3px solid white;">
+                    </div>
+                    <div id="corner3"
+                        style="width:70px;height:70px;border-radius:50%;background:#0f2027;position:absolute;bottom:15px;left:15px;border:3px solid white;">
+                    </div>
+                    <div id="corner4"
+                        style="width:70px;height:70px;border-radius:50%;background:#ff5f6d;position:absolute;bottom:15px;right:15px;border:3px solid white;">
+                    </div>
+                </div>
+
+                <!-- Sección de colores externos -->
+                <div style="color:#000;font-weight:bold;text-align:left;margin-bottom:1rem;">Colores:</div>
+                <div style="display:flex;justify-content:space-around;align-items:center;margin-bottom:2rem;">
+                    <div id="color1"
+                        style="width:80px;height:80px;border-radius:50%;background:#1a2a6c;cursor:pointer;border:3px solid #333;">
+                    </div>
+                    <div id="color2"
+                        style="width:80px;height:80px;border-radius:50%;background:#b21f1f;cursor:pointer;border:3px solid #333;">
+                    </div>
+                    <div id="color3"
+                        style="width:80px;height:80px;border-radius:50%;background:#0f2027;cursor:pointer;border:3px solid #333;">
+                    </div>
+                    <div id="color4"
+                        style="width:80px;height:80px;border-radius:50%;background:#ff5f6d;cursor:pointer;border:3px solid #333;">
+                    </div>
+                </div>
+
+                <!-- Imagen de prenda - MODIFICADO -->
+                <div class="image-upload-container" id="imageUploadContainer">
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <span class="image-upload-text">Haz clic para subir una imagen de la prenda</span>
+                    <img id="prendaPreview" src="#" alt="Vista previa de la prenda">
+                </div>
+
+                <!-- Diseñador -->
+                <div style="display:flex;flex-direction:column;align-items:center;margin-top:1.5rem;">
+                    <div style="width:70px;height:70px;border-radius:50%;background:#ccc;margin-bottom:0.5rem;"></div>
+                    <div style="font-weight:bold;">Nombre del Diseñador</div>
+                </div>
+
+                <!-- Precio - MODIFICADO -->
+                <div style="margin-top:1.5rem;">
+                    <div style="font-weight:bold;">Precio:</div>
+                    <div class="price-input-container">
+                        <input type="number" id="priceInput" step="0.10" min="0" value="17.50"
+                            style="font-size:1.4rem; width: 100px; text-align: center; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
+                        <span style="font-size:1.4rem;">€</span>
+                        <div class="price-buttons">
+                            <button id="plusEuro" style="padding:0.2rem 0.5rem;">+€</button>
+                            <button id="minusEuro" style="padding:0.2rem 0.5rem;">-€</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones acción -->
+                <div style="margin-top:2rem;">
+                    <button
+                        style="padding:1rem 2rem;border:none;border-radius:10px;background:#1a2a6c;color:#fff;font-size:1.2rem;cursor:pointer;">Guardar
+                        Diseño</button>
+                    <button id="cancelGarment"
+                        style="padding:1rem 2rem;border:none;border-radius:10px;background:#aaa;color:#111;font-size:1.2rem;cursor:pointer;margin-left:1rem;">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Eventos Destacados -->
     <section class="featured-events">
         <div class="container">
@@ -179,15 +399,13 @@
                 <!-- Evento Destacado 1 -->
                 <div class="featured-event-card">
                     <div class="featured-badge">Destacado</div>
-                    <div class="featured-event-img" style="
-                background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
-              "></div>
+                    <div class="featured-event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1074&q=80');">
+                    </div>
                     <div class="featured-event-content">
                         <h3>Gala de Premios ARKAS</h3>
-                        <p>
-                            La noche más esperada del año donde reconocemos a los mejores
-                            artistas y creadores de la industria.
-                        </p>
+                        <p>La noche más esperada del año donde reconocemos a los mejores artistas y creadores de la
+                            industria.</p>
                         <div class="event-footer">
                             <div class="event-price">$150.00</div>
                             <button class="btn-event">Comprar Entradas</button>
@@ -198,15 +416,12 @@
                 <!-- Evento Destacado 2 -->
                 <div class="featured-event-card">
                     <div class="featured-badge">Agotándose</div>
-                    <div class="featured-event-img" style="
-                background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
-              "></div>
+                    <div class="featured-event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1074&q=80');">
+                    </div>
                     <div class="featured-event-content">
                         <h3>Exposición de Arte Contemporáneo</h3>
-                        <p>
-                            Descubre las obras más innovadoras de artistas emergentes en
-                            esta exposición única.
-                        </p>
+                        <p>Descubre las obras más innovadoras de artistas emergentes en esta exposición única.</p>
                         <div class="event-footer">
                             <div class="event-price">$35.00</div>
                             <button class="btn-event">Reservar</button>
@@ -217,14 +432,12 @@
                 <!-- Evento Destacado 3 -->
                 <div class="featured-event-card">
                     <div class="featured-badge">Nuevo</div>
-                    <div class="featured-event-img" style="
-                background-image: url('https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
-                "></div>
+                    <div class="featured-event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1074&q=80');">
+                    </div>
                     <div class="featured-event-content">
                         <h3>Festival Gastronómico Internacional</h3>
-                        <p>
-                            Sabores de todo el mundo en un solo lugar. Degustaciones,
-                            talleres y competencias culinarias.
+                        <p>Sabores de todo el mundo en un solo lugar. Degustaciones, talleres y competencias culinarias.
                         </p>
                         <div class="event-footer">
                             <div class="event-price">$60.00</div>
@@ -242,10 +455,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>ARKAS</h3>
-                    <p>
-                        Tu destino para moda, música, deportes y eventos exclusivos.
-                        Conectamos a los fans con sus pasiones.
-                    </p>
+                    <p>Tu destino para moda, música, deportes y eventos exclusivos. Conectamos a los fans con sus
+                        pasiones.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -275,10 +486,7 @@
                 <div class="footer-column">
                     <h3>Contacto</h3>
                     <ul>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i> Calle Principal 123,
-                            Ciudad
-                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Ciudad</li>
                         <li><i class="fas fa-phone"></i> +1 234 567 890</li>
                         <li><i class="fas fa-envelope"></i> eventos@arkas.com</li>
                     </ul>
@@ -289,6 +497,94 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalBtn = document.getElementById('openGarmentModal');
+            const closeModalBtn = document.getElementById('closeGarmentModal');
+            const cancelBtn = document.getElementById('cancelGarment');
+            const garmentModal = document.getElementById('garmentModal');
+
+            function closeModal() { garmentModal.style.display = 'none'; }
+
+            openModalBtn.addEventListener('click', () => garmentModal.style.display = 'block');
+            closeModalBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+
+            window.addEventListener('click', (e) => { if (e.target === garmentModal) closeModal(); });
+
+            // Mostrar/ocultar colaboraciones
+            document.getElementById("addCollabBtn").addEventListener("click", () => {
+                const box = document.getElementById("collabBox");
+                box.style.display = box.style.display === "none" ? "block" : "none";
+            });
+
+            // Cambiar color de los círculos exteriores
+            const ids = ["color1", "color2", "color3", "color4"];
+            ids.forEach((id, i) => {
+                document.getElementById(id).addEventListener("click", () => {
+                    const color = prompt("Introduce un color (ej: #ff0000 o red):");
+                    if (color) {
+                        document.getElementById(id).style.background = color;
+                        document.getElementById("corner" + (i + 1)).style.background = color;
+                    }
+                });
+            });
+
+            // Subir y mostrar imagen de la prenda
+            const imageUpload = document.getElementById('imageUpload');
+            const prendaPreview = document.getElementById('prendaPreview');
+            const imageUploadContainer = document.getElementById('imageUploadContainer');
+
+            imageUploadContainer.addEventListener('click', () => {
+                imageUpload.click();
+            });
+
+            imageUpload.addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        prendaPreview.src = e.target.result;
+                        prendaPreview.style.display = 'block';
+                        imageUploadContainer.querySelector('.image-upload-text').style.display = 'none';
+                    }
+
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+
+            // Control de precio
+            const priceInput = document.getElementById('priceInput');
+            const plusEuroBtn = document.getElementById('plusEuro');
+            const minusEuroBtn = document.getElementById('minusEuro');
+
+            plusEuroBtn.addEventListener('click', () => {
+                priceInput.value = (parseFloat(priceInput.value) + 1).toFixed(2);
+            });
+
+            minusEuroBtn.addEventListener('click', () => {
+                const newValue = parseFloat(priceInput.value) - 1;
+                priceInput.value = (newValue >= 0 ? newValue : 0).toFixed(2);
+            });
+
+            // Permitir scroll para cambiar el precio
+            priceInput.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const step = 0.10;
+                const currentValue = parseFloat(priceInput.value);
+
+                if (e.deltaY < 0) {
+                    // Scroll hacia arriba - aumentar precio
+                    priceInput.value = (currentValue + step).toFixed(2);
+                } else {
+                    // Scroll hacia abajo - disminuir precio
+                    const newValue = currentValue - step;
+                    priceInput.value = (newValue >= 0 ? newValue : 0).toFixed(2);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
