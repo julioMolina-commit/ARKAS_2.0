@@ -5,807 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos - ARKAS</title>
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        :root {
-            --color-primary: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
-            --color-dark: #4c493c;
-            --color-support: #fff5cb;
-            --bg: #f4f0e8;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
-            color: white;
-            padding: 10px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .search-bar {
-            display: flex;
-            width: 40%;
-        }
-
-        .search-bar input {
-            flex: 1;
-            padding: 12px 15px;
-            border: none;
-            border-radius: 30px 0 0 30px;
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .search-bar button {
-            background: #333;
-            color: white;
-            border: none;
-            padding: 0 20px;
-            border-radius: 0 30px 30px 0;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .search-bar button:hover {
-            background: #555;
-        }
-
-        .user-actions a {
-            color: white;
-            margin-left: 20px;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-
-        /* Navigation Styles */
-        nav {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .main-nav {
-            display: flex;
-            list-style: none;
-        }
-
-        .main-nav li {
-            padding: 15px 20px;
-            position: relative;
-        }
-
-        .main-nav li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .main-nav li a:hover {
-            color: #b21f1f;
-        }
-
-        .main-nav li.active a {
-            color: #b21f1f;
-        }
-
-        .main-nav li.active::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
-        }
-
-        .nav-actions {
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-actions button {
-            background: none;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: all 0.3s;
-        }
-
-        .btn-filter {
-            background-color: #f0f0f0;
-        }
-
-        .btn-sort {
-            background-color: #e9ecef;
-        }
-
-        .nav-actions button:hover {
-            background-color: #ddd;
-        }
-
-        /* Filtros de Eventos */
-        .events-filters {
-            background-color: #fff;
-            padding: 20px 0;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .filters-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .filter-group {
-            display: flex;
-            gap: 15px;
-        }
-
-        .filter-select {
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        /* Grid de Eventos */
-        .events-section {
-            padding: 60px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.2rem;
-            color: #333;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
-        }
-
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .event-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .event-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .event-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .event-date {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            min-width: 60px;
-        }
-
-        .event-date .day {
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: block;
-        }
-
-        .event-date .month {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-
-        .event-content {
-            padding: 20px;
-        }
-
-        .event-category {
-            display: inline-block;
-            background: #f0f0f0;
-            color: #333;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-        }
-
-        .event-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .event-location {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #666;
-        }
-
-        .event-location i {
-            margin-right: 5px;
-        }
-
-        .event-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .event-price {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #b21f1f;
-        }
-
-        .btn-event {
-            background: linear-gradient(to right, #1a2a6c, #b21f1f);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: transform 0.3s;
-        }
-
-        .btn-event:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Sección Creación de Prenda */
-        .garment-creation {
-            padding: 60px 0;
-            background-color: #f8f9fa;
-        }
-
-        .garment-creation .section-title {
-            margin-bottom: 30px;
-        }
-
-        .create-garment-btn {
-            display: block;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
-            color: white;
-            border: none;
-            padding: 25px 40px;
-            border-radius: 15px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .create-garment-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Modal de Creación de Prenda */
-        .garment-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-
-        .garment-modal-content {
-            background-color: white;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 1000px;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #666;
-            transition: color 0.3s;
-        }
-
-        .close-modal:hover {
-            color: #b21f1f;
-        }
-
-        .garment-modal-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2rem;
-            color: #333;
-        }
-
-        .garment-customization {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .color-selector {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .color-section {
-            margin-bottom: 25px;
-        }
-
-        .color-section h3 {
-            margin-bottom: 15px;
-            color: #333;
-            font-size: 1.2rem;
-        }
-
-        .color-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .color-option {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .color-option:hover {
-            transform: scale(1.1);
-        }
-
-        .color-option.active {
-            border-color: #333;
-            transform: scale(1.1);
-        }
-
-        .garment-preview {
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 300px;
-        }
-
-        .garment-image {
-            width: 100%;
-            max-width: 400px;
-            height: 450px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            position: relative;
-            overflow: hidden;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="450" viewBox="0 0 400 450"><path d="M200,50 C250,50 300,80 320,120 L320,350 C300,390 250,420 200,420 C150,420 100,390 80,350 L80,120 C100,80 150,50 200,50 Z" fill="white" stroke="%23ccc" stroke-width="2"/></svg>');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-        }
-
-        .gradient-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0.8;
-        }
-
-        .gradient-top-left {
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 50%;
-            background: linear-gradient(135deg, #1a2a6c, transparent);
-            border-radius: 10px 0 0 0;
-        }
-
-        .gradient-bottom-left {
-            bottom: 0;
-            left: 0;
-            width: 50%;
-            height: 50%;
-            background: linear-gradient(45deg, #1a2a6c, transparent);
-            border-radius: 0 0 0 10px;
-        }
-
-        .gradient-top-right {
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 50%;
-            background: linear-gradient(225deg, #b21f1f, transparent);
-            border-radius: 0 10px 0 0;
-        }
-
-        .gradient-bottom-right {
-            bottom: 0;
-            right: 0;
-            width: 50%;
-            height: 50%;
-            background: linear-gradient(315deg, #b21f1f, transparent);
-            border-radius: 0 0 10px 0;
-        }
-
-        .garment-details {
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-        }
-
-        .artist-name {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .garment-name {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #666;
-        }
-
-        .designer-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .designer-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin-right: 10px;
-            background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .designer-name {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .price-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
-        }
-
-        .price-label {
-            font-size: 1rem;
-            color: #666;
-        }
-
-        .price-amount {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #b21f1f;
-        }
-
-        .price-recommendation {
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 5px;
-        }
-
-        .garment-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .btn-save,
-        .btn-cancel {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-save {
-            background: linear-gradient(to right, #1a2a6c, #b21f1f);
-            color: white;
-        }
-
-        .btn-cancel {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        .btn-save:hover,
-        .btn-cancel:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Eventos Destacados */
-        .featured-events {
-            padding: 60px 0;
-            background-color: #f0f2f5;
-        }
-
-        .featured-events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .featured-event-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            position: relative;
-        }
-
-        .featured-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #b21f1f;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            z-index: 2;
-        }
-
-        .featured-event-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .featured-event-content {
-            padding: 20px;
-        }
-
-        .featured-event-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .featured-event-content p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
-            color: white;
-            padding: 60px 0 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(to right, #1a2a6c, #b21f1f);
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: white;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #444;
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .social-icons a:hover {
-            background: #b21f1f;
-            transform: translateY(-5px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .search-bar {
-                width: 50%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .search-bar {
-                width: 80%;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .main-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .garment-customization {
-                flex-direction: column;
-            }
-
-            .color-selector,
-            .garment-preview {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .main-nav li {
-                padding: 10px 15px;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .events-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .create-garment-btn {
-                font-size: 1.4rem;
-                padding: 20px 30px;
-            }
-
-            .garment-modal-content {
-                padding: 20px;
-                margin: 20px auto;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -830,7 +31,7 @@
         <div class="container nav-container">
             <ul class="main-nav">
                 <li><a href="index.html">TODO</a></li>
-                <li><a href="musica.html">MUSICA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
                 <li><a href="deportes.html">DEPORTES</a></li>
                 <li><a href="eventos.html">EVENTOS</a></li>
                 <li class="active"><a href="armario.html">ARMARIO</a></li>
@@ -888,8 +89,7 @@
             <div class="events-grid">
                 <!-- Evento 1 -->
                 <div class="event-card">
-                    <div class="event-img" style="
-                background-image: url(../images/cami1.jpg)">
+                    <div class="event-img" style="background-image: url(../images/cami1.jpg)">
                         <div class="event-date">
                             <span class="day">15</span>
                             <span class="month">Jun</span>
@@ -914,8 +114,7 @@
 
                 <!-- Evento 2 -->
                 <div class="event-card">
-                    <div class="event-img" style="
-                background-image: url(../images/cami2.jpg)">
+                    <div class="event-img" style="background-image: url(../images/cami2.jpg)">
                         <div class="event-date">
                             <span class="day">22</span>
                             <span class="month">Jun</span>
@@ -937,8 +136,7 @@
 
                 <!-- Evento 3 -->
                 <div class="event-card">
-                    <div class="event-img" style="
-                background-image: url(../images/cami3.png)">
+                    <div class="event-img" style="background-image: url(../images/cami3.png)">
                         <div class="event-date">
                             <span class="day">30</span>
                             <span class="month">Jun</span>
@@ -973,101 +171,160 @@
 
     <!-- Modal de Creación de Prenda -->
     <div class="garment-modal" id="garmentModal">
-        <div class="garment-modal-content">
-            <span class="close-modal" id="closeGarmentModal">&times;</span>
-            <h2 class="garment-modal-title">DISEÑA TU PRENDA</h2>
+<div class="garment-modal-content"
+    style="max-width:950px;width:100%;margin:auto;background:#fff;border-radius:20px;padding:2rem;position:relative;box-shadow:0 4px 25px rgba(0,0,0,0.3);">
+    <span id="closeGarmentModal"
+        style="position:absolute;top:15px;right:20px;font-size:24px;cursor:pointer;">&times;</span>
+    <h2 style="text-align:center;margin-bottom:1.5rem;">DISEÑA TU PRENDA</h2>
 
-            <div class="garment-customization">
-                <div class="color-selector">
-                    <div class="color-section">
-                        <h3>Color Izquierda Arriba</h3>
-                        <div class="color-options" id="topLeftColors">
-                            <div class="color-option active" style="background-color: #1a2a6c;" data-color="#1a2a6c">
-                            </div>
-                            <div class="color-option" style="background-color: #b21f1f;" data-color="#b21f1f"></div>
-                            <div class="color-option" style="background-color: #fdbb2d;" data-color="#fdbb2d"></div>
-                            <div class="color-option" style="background-color: #8e2de2;" data-color="#8e2de2"></div>
-                            <div class="color-option" style="background-color: #4A00E0;" data-color="#4A00E0"></div>
-                            <div class="color-option" style="background-color: #11998e;" data-color="#11998e"></div>
-                        </div>
-                    </div>
+    <div style="text-align:center;">
+        <!-- Nombre del artista -->
+        <div style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+            <div style="font-weight:bold;font-size:1.2rem;">Nombre del Artista</div>
+            <button id="addCollabBtn"
+                style="background:#1a2a6c;color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer;">+</button>
+        </div>
 
-                    <div class="color-section">
-                        <h3>Color Izquierda Abajo</h3>
-                        <div class="color-options" id="bottomLeftColors">
-                            <div class="color-option active" style="background-color: #1a2a6c;" data-color="#1a2a6c">
-                            </div>
-                            <div class="color-option" style="background-color: #b21f1f;" data-color="#b21f1f"></div>
-                            <div class="color-option" style="background-color: #fdbb2d;" data-color="#fdbb2d"></div>
-                            <div class="color-option" style="background-color: #8e2de2;" data-color="#8e2de2"></div>
-                            <div class="color-option" style="background-color: #4A00E0;" data-color="#4A00E0"></div>
-                            <div class="color-option" style="background-color: #11998e;" data-color="#11998e"></div>
-                        </div>
-                    </div>
-
-                    <div class="color-section">
-                        <h3>Color Derecha Arriba</h3>
-                        <div class="color-options" id="topRightColors">
-                            <div class="color-option active" style="background-color: #b21f1f;" data-color="#b21f1f">
-                            </div>
-                            <div class="color-option" style="background-color: #1a2a6c;" data-color="#1a2a6c"></div>
-                            <div class="color-option" style="background-color: #fdbb2d;" data-color="#fdbb2d"></div>
-                            <div class="color-option" style="background-color: #8e2de2;" data-color="#8e2de2"></div>
-                            <div class="color-option" style="background-color: #4A00E0;" data-color="#4A00E0"></div>
-                            <div class="color-option" style="background-color: #11998e;" data-color="#11998e"></div>
-                        </div>
-                    </div>
-
-                    <div class="color-section">
-                        <h3>Color Derecha Abajo</h3>
-                        <div class="color-options" id="bottomRightColors">
-                            <div class="color-option active" style="background-color: #b21f1f;" data-color="#b21f1f">
-                            </div>
-                            <div class="color-option" style="background-color: #1a2a6c;" data-color="#1a2a6c"></div>
-                            <div class="color-option" style="background-color: #fdbb2d;" data-color="#fdbb2d"></div>
-                            <div class="color-option" style="background-color: #8e2de2;" data-color="#8e2de2"></div>
-                            <div class="color-option" style="background-color: #4A00E0;" data-color="#4A00E0"></div>
-                            <div class="color-option" style="background-color: #11998e;" data-color="#11998e"></div>
-                        </div>
-                    </div>
+        <!-- Caja de colaboraciones -->
+        <div id="collabBox"
+            style="display:none;background:#f8f8f8;border-radius:10px;padding:1rem;margin:1rem auto;width:80%;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h3 style="margin-top:0;">Colaboraciones</h3>
+            <input type="text" placeholder="Buscar colaborador..."
+                style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:1px solid #ccc;">
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Juan Pérez</span>
                 </div>
-
-                <div class="garment-preview">
-                    <div class="garment-image">
-                        <div class="gradient-overlay">
-                            <div class="gradient-top-left" id="gradientTopLeft"></div>
-                            <div class="gradient-bottom-left" id="gradientBottomLeft"></div>
-                            <div class="gradient-top-right" id="gradientTopRight"></div>
-                            <div class="gradient-bottom-right" id="gradientBottomRight"></div>
-                        </div>
-                    </div>
-
-                    <div class="garment-details">
-                        <div class="artist-name">Nombre del Artista</div>
-                        <div class="garment-name">Nombre de la Prenda</div>
-
-                        <div class="designer-info">
-                            <div class="designer-avatar"></div>
-                            <div class="designer-name">Nombre del Diseñador</div>
-                        </div>
-
-                        <div class="price-section">
-                            <div>
-                                <div class="price-label">Precio:</div>
-                                <div class="price-amount">17,50 €</div>
-                                <div class="price-recommendation">Precio recomendado</div>
-                            </div>
-                        </div>
-
-                        <div class="garment-actions">
-                            <button class="btn-save">Guardar Diseño</button>
-                            <button class="btn-cancel" id="cancelGarment">Cancelar</button>
-                        </div>
-                    </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Ana López</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Carlos
+                        Gómez</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Lucía
+                        Fernández</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:35px;height:35px;border-radius:50%;background:#ddd;"></div><span>Pedro
+                        Sánchez</span>
                 </div>
             </div>
         </div>
+
+        <!-- Nombre de la prenda editable -->
+        <div style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+            <input id="garmentName" type="text" value="Nombre de la Prenda"
+                style="font-size:1rem;padding:0.3rem 0.5rem;border-radius:6px;border:1px solid #aaa;width:250px;text-align:center;">
+            <i style="cursor:pointer;font-size:1.2rem;">✏️</i>
+        </div>
+
+        <hr style="margin:1rem 0;">
+
+        <!-- Caja gris oscura con los 4 círculos en las esquinas -->
+        <div style="width:100%;height:300px;position:relative;background:black;border-radius:15px;margin-bottom:2rem;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+        linear-gradient(45deg, rgba(255,255,255,0.15), rgba(255,255,255,0.15));">
+            <!-- Círculos en esquinas -->
+            <div id="corner1"
+                style="width:70px;height:70px;border-radius:50%;background:#1a2a6c;position:absolute;top:15px;left:15px;border:3px solid white;">
+            </div>
+            <div id="corner2"
+                style="width:70px;height:70px;border-radius:50%;background:#b21f1f;position:absolute;top:15px;right:15px;border:3px solid white;">
+            </div>
+            <div id="corner3"
+                style="width:70px;height:70px;border-radius:50%;background:#0f2027;position:absolute;bottom:15px;left:15px;border:3px solid white;">
+            </div>
+            <div id="corner4"
+                style="width:70px;height:70px;border-radius:50%;background:#ff5f6d;position:absolute;bottom:15px;right:15px;border:3px solid white;">
+            </div>
+        </div>
+
+        <!-- Sección de colores externos -->
+        <div style="color:#000;font-weight:bold;text-align:left;margin-bottom:1rem;">Colores:</div>
+        <div style="display:flex;justify-content:space-around;align-items:center;margin-bottom:2rem;">
+            <div id="color1"
+                style="width:80px;height:80px;border-radius:50%;background:#1a2a6c;cursor:pointer;border:3px solid #333;">
+            </div>
+            <div id="color2"
+                style="width:80px;height:80px;border-radius:50%;background:#b21f1f;cursor:pointer;border:3px solid #333;">
+            </div>
+            <div id="color3"
+                style="width:80px;height:80px;border-radius:50%;background:#0f2027;cursor:pointer;border:3px solid #333;">
+            </div>
+            <div id="color4"
+                style="width:80px;height:80px;border-radius:50%;background:#ff5f6d;cursor:pointer;border:3px solid #333;">
+            </div>
+        </div>
+
+        <!-- Imagen de prenda -->
+        <div
+            style="width:250px;height:250px;background:#ddd;margin:0 auto 2rem;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:#555;">Imagen de Prenda</span>
+        </div>
+
+        <!-- Diseñador -->
+        <div style="display:flex;flex-direction:column;align-items:center;margin-top:1.5rem;">
+            <div style="width:70px;height:70px;border-radius:50%;background:#ccc;margin-bottom:0.5rem;"></div>
+            <div style="font-weight:bold;">Nombre del Diseñador</div>
+        </div>
+
+        <!-- Precio -->
+        <div style="margin-top:1.5rem;">
+            <div style="font-weight:bold;">Precio:</div>
+            <div style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                <button id="minusEuro" style="padding:0.3rem 0.7rem;">-€</button>
+                <button id="minusCent" style="padding:0.3rem 0.7rem;">-¢</button>
+                <div id="price" style="font-size:1.4rem;">17.50 €</div>
+                <button id="plusCent" style="padding:0.3rem 0.7rem;">+¢</button>
+                <button id="plusEuro" style="padding:0.3rem 0.7rem;">+€</button>
+            </div>
+        </div>
+
+        <!-- Botones acción -->
+        <div style="margin-top:2rem;">
+            <button
+                style="padding:1rem 2rem;border:none;border-radius:10px;background:#1a2a6c;color:#fff;font-size:1.2rem;cursor:pointer;">Guardar
+                Diseño</button>
+            <button id="cancelGarment"
+                style="padding:1rem 2rem;border:none;border-radius:10px;background:#aaa;color:#111;font-size:1.2rem;cursor:pointer;margin-left:1rem;">Cancelar</button>
+        </div>
     </div>
+
+    <script>
+        // Mostrar/ocultar colaboraciones
+        document.getElementById("addCollabBtn").addEventListener("click", () => {
+            const box = document.getElementById("collabBox");
+            box.style.display = box.style.display === "none" ? "block" : "none";
+        });
+
+        // Cambiar color de los círculos exteriores
+        const ids = ["color1", "color2", "color3", "color4"];
+        ids.forEach((id, i) => {
+            document.getElementById(id).addEventListener("click", () => {
+                const color = prompt("Introduce un color (ej: #ff0000 o red):");
+                if (color) {
+                    document.getElementById(id).style.background = color;
+                    document.getElementById("corner" + (i + 1)).style.background = color;
+                }
+            });
+        });
+
+        // Control de precio
+        const priceEl = document.getElementById("price");
+        let price = 17.50;
+        document.getElementById("plusEuro").onclick = () => { price += 1; updatePrice(); };
+        document.getElementById("minusEuro").onclick = () => { price = Math.max(0, price - 1); updatePrice(); };
+        document.getElementById("plusCent").onclick = () => { price += 0.10; updatePrice(); };
+        document.getElementById("minusCent").onclick = () => { price = Math.max(0, price - 0.10); updatePrice(); };
+        function updatePrice() { priceEl.textContent = price.toFixed(2) + " €"; }
+    </script>
+</div>
+
+    </div>
+    <!-- 🔥 AQUÍ estaba el error: antes había un </section> de más que eliminamos -->
 
     <!-- Eventos Destacados -->
     <section class="featured-events">
@@ -1076,4 +333,122 @@
             <div class="featured-events-grid">
                 <!-- Evento Destacado 1 -->
                 <div class="featured-event-card">
-                    <div class="featured
+                    <div class="featured-badge">Destacado</div>
+                    <div class="featured-event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1074&q=80');">
+                    </div>
+                    <div class="featured-event-content">
+                        <h3>Gala de Premios ARKAS</h3>
+                        <p>La noche más esperada del año donde reconocemos a los mejores artistas y creadores de la
+                            industria.</p>
+                        <div class="event-footer">
+                            <div class="event-price">$150.00</div>
+                            <button class="btn-event">Comprar Entradas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Destacado 2 -->
+                <div class="featured-event-card">
+                    <div class="featured-badge">Agotándose</div>
+                    <div class="featured-event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1074&q=80');">
+                    </div>
+                    <div class="featured-event-content">
+                        <h3>Exposición de Arte Contemporáneo</h3>
+                        <p>Descubre las obras más innovadoras de artistas emergentes en esta exposición única.</p>
+                        <div class="event-footer">
+                            <div class="event-price">$35.00</div>
+                            <button class="btn-event">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Destacado 3 -->
+                <div class="featured-event-card">
+                    <div class="featured-badge">Nuevo</div>
+                    <div class="featured-event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1074&q=80');">
+                    </div>
+                    <div class="featured-event-content">
+                        <h3>Festival Gastronómico Internacional</h3>
+                        <p>Sabores de todo el mundo en un solo lugar. Degustaciones, talleres y competencias culinarias.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-price">$60.00</div>
+                            <button class="btn-event">Comprar Entradas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Footer FUERA de todos los div/section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ARKAS</h3>
+                    <p>Tu destino para moda, música, deportes y eventos exclusivos. Conectamos a los fans con sus
+                        pasiones.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorías de Eventos</h3>
+                    <ul>
+                        <li><a href="#">Conciertos</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Conferencias</a></li>
+                        <li><a href="#">Arte y Cultura</a></li>
+                        <li><a href="#">Gastronomía</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Eventos Próximos</a></li>
+                        <li><a href="#">Eventos Pasados</a></li>
+                        <li><a href="#">Crear Evento</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> eventos@arkas.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ARKAS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalBtn = document.getElementById('openGarmentModal');
+            const closeModalBtn = document.getElementById('closeGarmentModal');
+            const cancelBtn = document.getElementById('cancelGarment');
+            const garmentModal = document.getElementById('garmentModal');
+
+            function closeModal() { garmentModal.style.display = 'none'; }
+
+            openModalBtn.addEventListener('click', () => garmentModal.style.display = 'block');
+            closeModalBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+
+            window.addEventListener('click', (e) => { if (e.target === garmentModal) closeModal(); });
+        });
+    </script>
+</body>
+
+</html>
