@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos - ARKAS</title>
     <link rel="stylesheet" href="../css/styles.css" />
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
@@ -15,6 +16,18 @@
         <div class="container header-content">
             <img src="../images/logo_blanco.png" alt="Logo" class="imagen_logo" width="200" />
             <div class="search-bar">
+=======
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <div class="contenedor contenido-encabezado">
+    <a href="../../index.html">
+        <img src="../images/logo_blanco.png" alt="Logo" class="imagen_logo" width="200" />
+    </a>
+            <div class="barra-busqueda">
+>>>>>>> Stashed changes
                 <input type="text" placeholder="Buscar eventos, conciertos, conferencias..." />
                 <button><i class="fas fa-search"></i></button>
             </div>
@@ -26,6 +39,7 @@
         </div>
     </header>
 
+<<<<<<< Updated upstream
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
@@ -40,6 +54,22 @@
                 <li><a href="influencers.html">INFLUENCERS</a></li>
                 <li><a href="poker.html">POKER</a></li>
                 <li><a href="novedades.html">NOVEDADES</a></li>
+=======
+    <!-- Navegación -->
+    <nav class="navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <ul class="navegacion-principal">
+                <li><a href="../../index.html">TODO</a></li>
+                <li><a href="#">MÚSICA</a></li>
+                <li><a href="#">DEPORTES</a></li>
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li class="activo"><a href="armario.html">ARMARIO</a></li>
+                <li><a href="#">EMPRESAS</a></li>
+                <li><a href="#">DISEÑADORES</a></li>
+                <li><a href="#">INFLUENCERS</a></li>
+                <li><a href="#">POKER</a></li>
+                <li><a href="#">NOVEDADES</a></li>
+>>>>>>> Stashed changes
             </ul>
             <div class="nav-actions">
                 <button class="btn-filter"><i class="fas fa-filter"></i> Filtrar</button>
@@ -82,6 +112,7 @@
         </div>
     </section>
 
+<<<<<<< Updated upstream
     <!-- Grid de Eventos -->
     <section class="events-section" id="events">
         <div class="container">
@@ -95,6 +126,17 @@
                             <span class="month">Jun</span>
                             <span class="year">24</span>
                         </div>
+=======
+    <!-- Grid de Prendas -->
+    <section class="seccion-eventos" id="prendas">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">ARMARIO DE ARKAS</h2>
+            <div class="grid-eventos">
+                <!-- Prenda 1 -->
+                <div class="tarjeta-evento">
+                    <div class="imagen-evento" style="background-image: url(../images/footer.jpg);">
+                        
+>>>>>>> Stashed changes
                     </div>
                     <div class="event-content">
                         <h3>Arkas White</h3>
@@ -170,6 +212,7 @@
     </section>
 
     <!-- Modal de Creación de Prenda -->
+<<<<<<< Updated upstream
     <div class="garment-modal" id="garmentModal">
 <div class="garment-modal-content"
     style="max-width:950px;width:100%;margin:auto;background:#fff;border-radius:20px;padding:2rem;position:relative;box-shadow:0 4px 25px rgba(0,0,0,0.3);">
@@ -389,6 +432,218 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
+=======
+    <div class="modal-prenda" id="modalPrenda">
+        <div class="contenido-modal-prenda">
+            <span class="cerrar-modal" id="cerrarModalPrenda">&times;</span>
+            <h2 class="titulo-modal-prenda">DISEÑA TU PRENDA</h2>
+    
+            <!-- Encabezado con nombre del artista y prenda -->
+            <div class="encabezado-diseño">
+                <div class="campo-nombre">
+                    <label for="nombreArtista">Nombre del Artista</label>
+                    <input type="text" id="nombreArtista" class="entrada-texto" placeholder="Nombre del artista"
+                        value="ARKAS">
+                </div>
+                <div class="campo-nombre">
+                    <label for="nombrePrenda">Nombre de la Prenda</label>
+                    <input type="text" id="nombrePrenda" class="entrada-texto" placeholder="Nombre de la prenda"
+                        value="Edición Especial">
+                </div>  
+            </div>
+    
+            <!-- Selector de Tipo de Prenda -->
+            <div class="seccion-tipo-prenda">
+                <h3>Tipo de Prenda</h3>
+                <div class="categorias-prendas">
+                    <div class="categoria-prenda">
+                        <h4>Categoría</h4>
+                        <select class="selector-opcion" id="selectorCategoria">
+                            <option value="cabeza">Cabeza</option>
+                            <option value="cuerpo">Cuerpo</option>
+                            <option value="piernas">Piernas</option>
+                            <option value="pies">Pies</option>
+                        </select>
+                    </div>
+                    <div class="categoria-prenda">
+                        <h4>Tipo</h4>
+                        <select class="selector-opcion" id="selectorTipoPrenda">
+                            <!-- Las opciones se cargarán dinámicamente -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Visualizador central de la prenda -->
+            <div class="contenedor-visualizador">
+                <div class="visualizador-prenda" id="visualizadorPrenda">
+                    <div class="vista-prenda" id="vistaPrenda"></div>
+                    <div class="texto-ejemplo" id="textoEjemplo">ARKAS</div>
+                </div>
+                <div class="selectores-color">
+                    <div class="grupo-selector-color">
+                        <label>Color 1</label>
+                        <input type="color" id="selectorColor1" value="#1a2a6c">
+                    </div>
+                    <div class="grupo-selector-color">
+                        <label>Color 2</label>
+                        <input type="color" id="selectorColor2" value="#b21f1f">
+                    </div>
+                    <div class="grupo-selector-color">
+                        <label>Color 3</label>
+                        <input type="color" id="selectorColor3" value="#0f2027">
+                    </div>
+                    <div class="grupo-selector-color">
+                        <label>Color 4</label>
+                        <input type="color" id="selectorColor4" value="#ff5f6d">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles inferiores -->
+            <div class="controles-inferiores">
+                <!-- Columna izquierda: Colaboraciones -->
+                <div class="columna-colaboraciones">
+                    <h3>Colaboraciones</h3>
+    
+                    <div class="control-colaboracion">
+                        <label>Artista</label>
+                        <div class="selector-con-boton">
+                            <div id="artistaSeleccionado" class="elemento-seleccionado">
+                                <span>Ninguno</span>
+                                <button type="button" class="btn-buscar" id="btnBuscarArtista">+</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="control-colaboracion">
+                        <label>Marca</label>
+                        <div class="selector-con-boton">
+                            <div id="marcaSeleccionada" class="elemento-seleccionado">
+                                <span>Ninguno</span>
+                                <button type="button" class="btn-buscar" id="btnBuscarMarca">+</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="control-colaboracion">
+                        <label>Diseñador</label>
+                        <div class="selector-con-boton">
+                            <div id="disenadorSeleccionado" class="elemento-seleccionado">
+                                <span>Ninguno</span>
+                                <button type="button" class="btn-buscar" id="btnBuscarDisenador">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Columna derecha: Controles de texto -->
+                <div class="columna-controles-texto">
+                    <h3>Personalizar Texto</h3>
+    
+                    <div class="control-grupo">
+                        <label for="selectorTipografia">Tipografía</label>
+                        <select class="selector-opcion" id="selectorTipografia">
+                            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Moderna</option>
+                            <option value="'Times New Roman', Times, serif">Clásica</option>
+                            <option value="'Arial Black', Gadget, sans-serif">Urbana</option>
+                            <option value="'Georgia', serif">Elegante</option>
+                            <option value="'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif">Graffiti</option>
+                            <option value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Futurista</option>
+                        </select>
+                    </div>
+    
+                    <div class="control-grupo">
+                        <label for="selectorColorTexto">Color del Texto</label>
+                        <input type="color" id="selectorColorTexto" value="#000000">
+                    </div>
+    
+                    <div class="control-grupo">
+                        <label for="controlTamanioTexto">Tamaño de Letra: <span id="valorTamanioTexto">24px</span></label>
+                        <input type="range" id="controlTamanioTexto" min="12" max="48" value="24">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Sección de imágenes -->
+            <div class="seccion-imagenes">
+                <h3>Añade Imágenes a tu Diseño</h3>
+                <div class="grid-imagenes">
+                    <div class="espacio-imagen" data-index="1">
+                        <i class="fas fa-plus"></i>
+                        <input type="file" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="espacio-imagen" data-index="2">
+                        <i class="fas fa-plus"></i>
+                        <input type="file" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="espacio-imagen" data-index="3">
+                        <i class="fas fa-plus"></i>
+                        <input type="file" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Cuadro de notas -->
+            <div class="seccion-notas">
+                <h3>Notas del Diseño</h3>
+                <textarea placeholder="Añade notas sobre tu diseño, ideas o especificaciones..." id="areaNotas"></textarea>
+            </div>
+    
+            <!-- Botones de acción centrados -->
+            <div class="acciones-finales">
+                <button class="btn-guardar-grande">GUARDAR DISEÑO</button>
+                <button class="btn-cancelar-grande" id="cancelarPrenda">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modales de búsqueda (se mantienen igual) -->
+    <div class="modal-busqueda" id="modalArtistas">
+        <div class="contenido-modal-busqueda">
+            <span class="cerrar-modal" id="cerrarModalArtistas">&times;</span>
+            <h2>Selecciona un Artista</h2>
+            <div class="barra-busqueda-modal">
+                <input type="text" placeholder="Buscar artista..." id="busquedaArtista">
+            </div>
+            <div class="lista-opciones" id="listaArtistas">
+                <!-- Las opciones se cargarán dinámicamente -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-busqueda" id="modalMarcas">
+        <div class="contenido-modal-busqueda">
+            <span class="cerrar-modal" id="cerrarModalMarcas">&times;</span>
+            <h2>Selecciona una Marca</h2>
+            <div class="barra-busqueda-modal">
+                <input type="text" placeholder="Buscar marca..." id="busquedaMarca">
+            </div>
+            <div class="lista-opciones" id="listaMarcas">
+                <!-- Las opciones se cargarán dinámicamente -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-busqueda" id="modalDisenadores">
+        <div class="contenido-modal-busqueda">
+            <span class="cerrar-modal" id="cerrarModalDisenadores">&times;</span>
+            <h2>Selecciona un Diseñador</h2>
+            <div class="barra-busqueda-modal">
+                <input type="text" placeholder="Buscar diseñador..." id="busquedaDisenador">
+            </div>
+            <div class="lista-opciones" id="listaDisenadores">
+                <!-- Las opciones se cargarán dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="columna-pie">
+>>>>>>> Stashed changes
                     <h3>ARKAS</h3>
                     <p>Tu destino para moda, música, deportes y eventos exclusivos. Conectamos a los fans con sus
                         pasiones.</p>
@@ -433,6 +688,7 @@
         </div>
     </footer>
 
+<<<<<<< Updated upstream
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const openModalBtn = document.getElementById('openGarmentModal');
@@ -449,6 +705,9 @@
             window.addEventListener('click', (e) => { if (e.target === garmentModal) closeModal(); });
         });
     </script>
+=======
+    <script src="../js/script.js"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

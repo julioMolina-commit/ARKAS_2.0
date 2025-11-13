@@ -1,9 +1,17 @@
 :root {
+<<<<<<< Updated upstream
   --color-primary: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
   --color-dark: #4c493c;
   --color-support: #fff5cb;
   --bg: #f4f0e8;
   --white: #ffffff;
+=======
+  --color-primario: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
+  --color-oscuro: #4c493c;
+  --color-soporte: #fff5cb;
+  --color-fondo: #f4f0e8;
+  --color-blanco: #ffffff;
+>>>>>>> Stashed changes
 }
 
 * {
@@ -25,9 +33,15 @@ body {
   padding: 0 20px;
 }
 
+<<<<<<< Updated upstream
 /* Header Styles */
 header {
   background: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
+=======
+/* Estilos de Encabezado */
+.encabezado {
+  background: var(--color-primario);
+>>>>>>> Stashed changes
   color: white;
   padding: 10px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -74,8 +88,13 @@ header {
   text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 /* Navigation Styles */
 nav {
+=======
+/* Estilos de Navegación */
+.navegacion {
+>>>>>>> Stashed changes
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -106,11 +125,19 @@ nav {
   transition: color 0.3s;
 }
 
+<<<<<<< Updated upstream
 .main-nav li a:hover {
   color: #b21f1f;
 }
 
 .main-nav li.active a {
+=======
+.navegacion-principal li a:hover {
+  color: #b21f1f;
+}
+
+.navegacion-principal li.activo a {
+>>>>>>> Stashed changes
   color: #b21f1f;
 }
 
@@ -151,8 +178,152 @@ nav {
   background-color: #ddd;
 }
 
+<<<<<<< Updated upstream
 /* Filtros de Eventos */
 .events-filters {
+=======
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-hero {
+  background: linear-gradient(to right, #1a2a6c, #b21f1f);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+}
+
+/* Categorías */
+.categorias {
+  padding: 60px 0;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #333;
+  position: relative;
+}
+
+.titulo-seccion::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+}
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta-categoria {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.tarjeta-categoria:hover {
+  transform: translateY(-10px);
+}
+
+.imagen-categoria {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-categoria {
+  padding: 20px;
+}
+
+.contenido-categoria h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Productos Destacados */
+.destacados {
+  padding: 60px 0;
+  background-color: #f0f2f5;
+}
+
+.grid-destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta-destacada {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.imagen-destacada {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-destacado {
+  padding: 20px;
+}
+
+.contenido-destacado h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.contenido-destacado p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.precio-destacado {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #b21f1f;
+}
+
+/* Filtros de Eventos */
+.filtros-eventos {
+>>>>>>> Stashed changes
   background-color: #fff;
   padding: 20px 0;
   margin-bottom: 40px;
@@ -182,7 +353,11 @@ nav {
 }
 
 /* Grid de Eventos */
+<<<<<<< Updated upstream
 .events-section {
+=======
+.seccion-eventos {
+>>>>>>> Stashed changes
   padding: 60px 0;
 }
 
@@ -232,7 +407,11 @@ nav {
   position: relative;
 }
 
+<<<<<<< Updated upstream
 .event-date {
+=======
+.fecha-evento {
+>>>>>>> Stashed changes
   position: absolute;
   top: 15px;
   left: 15px;
@@ -244,18 +423,30 @@ nav {
   min-width: 60px;
 }
 
+<<<<<<< Updated upstream
 .event-date .day {
+=======
+.fecha-evento .dia {
+>>>>>>> Stashed changes
   font-size: 1.5rem;
   font-weight: bold;
   display: block;
 }
 
+<<<<<<< Updated upstream
 .event-date .month {
+=======
+.fecha-evento .mes {
+>>>>>>> Stashed changes
   font-size: 0.9rem;
   text-transform: uppercase;
 }
 
+<<<<<<< Updated upstream
 .event-content {
+=======
+.contenido-evento {
+>>>>>>> Stashed changes
   padding: 20px;
 }
 
@@ -275,18 +466,30 @@ nav {
   color: #333;
 }
 
+<<<<<<< Updated upstream
 .event-location {
+=======
+.ubicacion-evento {
+>>>>>>> Stashed changes
   display: flex;
   align-items: center;
   margin-bottom: 15px;
   color: #666;
 }
 
+<<<<<<< Updated upstream
 .event-location i {
   margin-right: 5px;
 }
 
 .event-footer {
+=======
+.ubicacion-evento i {
+  margin-right: 5px;
+}
+
+.pie-evento {
+>>>>>>> Stashed changes
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -298,7 +501,11 @@ nav {
   color: #b21f1f;
 }
 
+<<<<<<< Updated upstream
 .btn-event {
+=======
+.btn-evento {
+>>>>>>> Stashed changes
   background: linear-gradient(to right, #1a2a6c, #b21f1f);
   color: white;
   border: none;
@@ -314,11 +521,72 @@ nav {
 }
 
 /* Eventos Destacados */
+<<<<<<< Updated upstream
 .featured-events {
+=======
+.eventos-destacados {
   padding: 60px 0;
   background-color: #f0f2f5;
 }
 
+.grid-eventos-destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta-evento-destacado {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.insignia-destacada {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #b21f1f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.imagen-evento-destacado {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-evento-destacado {
+  padding: 20px;
+}
+
+.contenido-evento-destacado h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contenido-evento-destacado p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* ========== ARMARIO ========== */
+
+/* CREACION DE PRENDA */
+.creacion-prenda {
+>>>>>>> Stashed changes
+  padding: 60px 0;
+  background-color: #f0f2f5;
+}
+
+<<<<<<< Updated upstream
 .featured-events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -330,6 +598,493 @@ nav {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+=======
+.creacion-prenda .titulo-seccion {
+  margin-bottom: 30px;
+}
+
+.btn-crear-prenda {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  color: white;
+  border: none;
+  padding: 25px 40px;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-crear-prenda:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal de Creación de Prenda */
+.modal-prenda {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.contenido-modal-prenda {
+  background-color: white;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.cerrar-modal:hover {
+  color: #b21f1f;
+}
+
+.titulo-modal-prenda {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.personalizacion-prenda {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.selector-color {
+  flex: 1;
+  min-width: 250px;
+}
+
+.seccion-color {
+  margin-bottom: 25px;
+}
+
+.seccion-color h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.opciones-color {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.opcion-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 2px solid transparent;
+}
+
+.opcion-color:hover {
+  transform: scale(1.1);
+}
+
+.opcion-color.activa {
+  border-color: #333;
+  transform: scale(1.1);
+}
+
+.vista-previa-prenda {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+.imagen-prenda {
+  width: 100%;
+  max-width: 400px;
+  height: 450px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="450" viewBox="0 0 400 450"><path d="M200,50 C250,50 300,80 320,120 L320,350 C300,390 250,420 200,420 C150,420 100,390 80,350 L80,120 C100,80 150,50 200,50 Z" fill="white" stroke="%23ccc" stroke-width="2"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.nombre-artista {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.nombre-prenda {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.info-diseñador {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.avatar-diseñador {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 10px;
+  background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.nombre-diseñador {
+  font-weight: 600;
+  color: #333;
+}
+
+.seccion-precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.etiqueta-precio {
+  font-size: 1rem;
+  color: #666;
+}
+
+.monto-precio {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b21f1f;
+}
+
+.recomendacion-precio {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.acciones-prenda {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-guardar,
+.btn-cancelar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-guardar {
+  background: linear-gradient(to right, #1a2a6c, #b21f1f);
+  color: white;
+}
+
+.btn-cancelar {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-guardar:hover,
+.btn-cancelar:hover {
+  transform: translateY(-2px);
+}
+
+/* Estilos específicos del armario */
+.caja-diseño {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background: black;
+  border-radius: 15px;
+  margin: 1rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.entrada-nombre-prenda {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.imagenes-diseñador {
+  margin: 1.5rem 0;
+}
+
+.grid-imagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.espacio-imagen {
+  width: 100%;
+  min-width: 300px;
+  height: 100px;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.espacio-imagen:hover {
+  border-color: #b21f1f;
+  background: #f9f9f9;
+}
+
+.espacio-imagen i {
+  font-size: 2rem;
+  color: #999;
+}
+
+.control-deslizante-precio {
+  width: 100%;
+  min-width: 500px;
+  margin: 0.5rem 0;
+}
+
+.seccion-precio {
+  align-items: center;
+}
+
+/* Pie de página */
+.pie-pagina {
+  background: var(--color-primario);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.contenido-pie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.columna-pie h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.columna-pie h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #1a2a6c, #b21f1f);
+}
+
+.columna-pie ul {
+  list-style: none;
+}
+
+.columna-pie ul li {
+  margin-bottom: 10px;
+}
+
+.columna-pie ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.columna-pie ul li a:hover {
+  color: white;
+}
+
+.iconos-sociales {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.iconos-sociales a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #444;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.iconos-sociales a:hover {
+  background: #b21f1f;
+  transform: translateY(-5px);
+}
+
+.derechos-autor {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Nuevos estilos para las funcionalidades adicionales del armario */
+
+/* Selectores adicionales */
+.seccion-selector {
+  margin-bottom: 20px;
+}
+
+.seccion-selector h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.selector-opcion {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+/* Texto de ejemplo en la prenda */
+.texto-ejemplo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 3;
+  text-align: center;
+  max-width: 80%;
+  transition: all 0.3s ease;
+}
+
+/* Información de colaboración */
+.info-colaboracion {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #b21f1f;
+}
+
+.info-colaboracion h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.info-colaboracion p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Selector con botón de búsqueda */
+.selector-con-boton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.elemento-seleccionado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  flex: 1;
+}
+
+.btn-buscar {
+  background: #b21f1f;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modales de búsqueda */
+.modal-busqueda {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.contenido-modal-busqueda {
+  background-color: white;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+>>>>>>> Stashed changes
   position: relative;
 }
 
@@ -367,6 +1122,7 @@ nav {
   margin-bottom: 15px;
 }
 
+<<<<<<< Updated upstream
 /* Footer */
 footer {
   background: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
@@ -375,12 +1131,21 @@ footer {
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
+=======
+.precio-colaboracion {
+  font-weight: bold;
+  color: #b21f1f;
 }
 
+/* Categorías de prendas */
+.categorias-prendas {
+>>>>>>> Stashed changes
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+<<<<<<< Updated upstream
 .footer-column h3 {
   font-size: 1.3rem;
   margin-bottom: 20px;
@@ -449,6 +1214,394 @@ footer {
 }
 
 /* Responsive Design */
+=======
+.categoria-prenda {
+  margin-bottom: 15px;
+}
+
+.categoria-prenda h4 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Nuevos estilos para el modal reorganizado */
+
+.encabezado-diseño {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.campo-nombre label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.entrada-texto {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.entrada-texto:focus {
+  border-color: #b21f1f;
+  outline: none;
+}
+
+/* Visualizador central */
+.contenedor-visualizador {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.visualizador-prenda {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.vista-prenda {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><path d="M30,20 C40,10 60,10 70,20 L80,40 C80,50 85,55 90,60 L90,100 C90,110 80,115 70,110 L30,110 C20,115 10,110 10,100 L10,60 C15,55 20,50 20,40 Z" fill="white" stroke="%23ccc" stroke-width="2"/></svg>');
+}
+
+.texto-ejemplo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Controles inferiores */
+.controles-inferiores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.columna-colaboraciones h3,
+.columna-controles-texto h3 {
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.control-colaboracion {
+  margin-bottom: 20px;
+}
+
+.control-colaboracion label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.control-grupo {
+  margin-bottom: 20px;
+}
+
+.control-grupo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.control-grupo input[type="color"] {
+  width: 100%;
+  height: 45px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.control-grupo input[type="color"]:hover {
+  border-color: #b21f1f;
+}
+
+.control-grupo input[type="range"] {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Selector con botón de búsqueda mejorado */
+.selector-con-boton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.elemento-seleccionado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  flex: 1;
+  transition: border-color 0.3s;
+}
+
+.elemento-seleccionado:hover {
+  border-color: #b21f1f;
+}
+
+.btn-buscar {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.btn-buscar:hover {
+  transform: scale(1.1);
+}
+
+/* Sección de imágenes */
+.seccion-imagenes {
+  margin: 30px 0;
+}
+
+.seccion-imagenes h3 {
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.grid-imagenes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.espacio-imagen {
+  aspect-ratio: 1;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #f9f9f9;
+}
+
+.espacio-imagen:hover {
+  border-color: #b21f1f;
+  background-color: #f0f0f0;
+}
+
+.espacio-imagen i {
+  font-size: 2rem;
+  color: #999;
+}
+
+/* Sección de notas */
+.seccion-notas {
+  margin: 30px 0;
+}
+
+.seccion-notas h3 {
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.seccion-notas textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.seccion-notas textarea:focus {
+  border-color: #b21f1f;
+  outline: none;
+}
+
+/* Botones de acción finales */
+.acciones-finales {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.btn-guardar-grande,
+.btn-cancelar-grande {
+  padding: 18px 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 200px;
+}
+
+.btn-guardar-grande {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  color: white;
+  box-shadow: 0 5px 15px rgba(178, 31, 31, 0.3);
+}
+
+.btn-cancelar-grande {
+  background: #f0f0f0;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-guardar-grande:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(178, 31, 31, 0.4);
+}
+
+.btn-cancelar-grande:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: #e0e0e0;
+}
+
+/* Estilos para la sección de tipo de prenda */
+.seccion-tipo-prenda {
+  margin: 25px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #b21f1f;
+}
+
+.seccion-tipo-prenda h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.categorias-prendas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.categoria-prenda h4 {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Ajustes para el visualizador con tipos de prenda */
+.vista-prenda.camiseta {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><path d="M30,20 C40,10 60,10 70,20 L80,40 C80,50 85,55 90,60 L90,100 C90,110 80,115 70,110 L30,110 C20,115 10,110 10,100 L10,60 C15,55 20,50 20,40 Z" fill="white" stroke="%23ccc" stroke-width="2"/></svg>');
+}
+
+.vista-prenda.sudadera {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140"><path d="M30,30 C40,20 60,20 70,30 L75,50 C80,60 85,65 90,70 L90,120 C90,130 80,135 70,130 L30,130 C20,135 10,130 10,120 L10,70 C15,65 20,60 25,50 Z" fill="white" stroke="%23ccc" stroke-width="2"/><rect x="35" y="30" width="30" height="15" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.hoodie {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140"><path d="M30,30 C40,20 60,20 70,30 L75,50 C80,60 85,65 90,70 L90,120 C90,130 80,135 70,130 L30,130 C20,135 10,130 10,120 L10,70 C15,65 20,60 25,50 Z" fill="white" stroke="%23ccc" stroke-width="2"/><path d="M35,30 L35,20 C35,15 40,10 45,10 L55,10 C60,10 65,15 65,20 L65,30" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.chaqueta {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140"><path d="M30,20 C40,10 60,10 70,20 L75,40 C80,50 85,55 90,60 L90,120 C90,130 80,135 70,130 L30,130 C20,135 10,130 10,120 L10,60 C15,55 20,50 25,40 Z" fill="white" stroke="%23ccc" stroke-width="2"/><rect x="40" y="20" width="20" height="80" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.gorra {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80"><ellipse cx="50" cy="30" rx="40" ry="25" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="10" y="30" width="80" height="20" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.sombrero {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 70"><ellipse cx="50" cy="20" rx="45" ry="15" fill="white" stroke="%23ccc" stroke-width="1"/><path d="M30,20 L30,50 C30,55 40,60 50,60 C60,60 70,55 70,50 L70,20 Z" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.vincha {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40"><rect x="20" y="15" width="60" height="10" rx="5" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.bandana {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60"><path d="M20,10 C30,5 70,5 80,10 L85,40 C85,45 70,50 50,50 C30,50 15,45 15,40 Z" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.pantalon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><path d="M30,10 L70,10 L75,60 C75,70 70,80 60,85 L40,85 C30,80 25,70 25,60 Z" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="30" y="85" width="15" height="35" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="55" y="85" width="15" height="35" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.shorts {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80"><path d="M30,10 L70,10 L75,40 C75,50 70,55 60,60 L40,60 C30,55 25,50 25,40 Z" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="30" y="60" width="15" height="20" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="55" y="60" width="15" height="20" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.falda {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M30,20 L70,20 L80,80 C80,90 70,95 50,95 C30,95 20,90 20,80 Z" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.leggings {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><rect x="25" y="10" width="20" height="110" rx="5" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="55" y="10" width="20" height="110" rx="5" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.zapatillas {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60"><path d="M20,10 L80,10 C85,15 90,25 85,35 L80,50 C75,55 25,55 20,50 L15,35 C10,25 15,15 20,10 Z" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.botas {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80"><path d="M20,10 L80,10 C85,15 90,25 85,35 L80,70 C75,75 25,75 20,70 L15,35 C10,25 15,15 20,10 Z" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="20" y="70" width="60" height="10" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.sandalias {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40"><path d="M20,10 L80,10 C85,15 90,25 85,30 L80,35 C75,40 25,40 20,35 L15,30 C10,25 15,15 20,10 Z" fill="white" stroke="%23ccc" stroke-width="1"/><rect x="40" y="35" width="20" height="5" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+.vista-prenda.zapatos {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><path d="M20,10 L80,10 C85,15 90,25 85,30 L80,40 C75,45 25,45 20,40 L15,30 C10,25 15,15 20,10 Z" fill="white" stroke="%23ccc" stroke-width="1"/></svg>');
+}
+
+/* Diseño Responsive */
+>>>>>>> Stashed changes
 @media (max-width: 992px) {
   .search-bar {
     width: 50%;
@@ -475,13 +1628,70 @@ footer {
     justify-content: center;
   }
 
+<<<<<<< Updated upstream
   .garment-customization {
+=======
+  .personalizacion-prenda {
+    flex-direction: column;
+  }
+
+  .selector-color,
+  .vista-previa-prenda {
+    width: 100%;
+  }
+
+  .texto-ejemplo {
+    font-size: 18px;
+  }
+
+  .seccion-selector h3 {
+    font-size: 0.9rem;
+  }
+
+  .selector-opcion {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .categorias-prendas {
+    grid-template-columns: 1fr;
+  }
+
+  .contenido-modal-busqueda {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .encabezado-diseño {
+    grid-template-columns: 1fr;
+  }
+
+  .controles-inferiores {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .visualizador-prenda {
+    width: 300px;
+    height: 300px;
+  }
+
+  .grid-imagenes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .acciones-finales {
+>>>>>>> Stashed changes
     flex-direction: column;
   }
 
   .color-selector,
   .garment-preview {
     width: 100%;
+<<<<<<< Updated upstream
+=======
+    max-width: 300px;
+>>>>>>> Stashed changes
   }
 }
 
@@ -509,6 +1719,7 @@ footer {
   }
 }
 
+<<<<<<< Updated upstream
 /* ========== ARMARIO ========== */
 
 /* CREACION DE PRENDA */
@@ -790,4 +2001,24 @@ footer {
 .btn-save:hover,
 .btn-cancel:hover {
   transform: translateY(-2px);
+=======
+  .grupo-selector-color {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .grid-imagenes {
+    grid-template-columns: 1fr;
+  }
+
+  .visualizador-prenda {
+    width: 250px;
+    height: 250px;
+  }
+
+  .texto-ejemplo {
+    font-size: 24px;
+  }
+>>>>>>> Stashed changes
 }
