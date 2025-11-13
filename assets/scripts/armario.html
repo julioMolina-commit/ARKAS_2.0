@@ -7,43 +7,15 @@
     <title>Armario - ARKAS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <style>
-        /* Estilos adicionales para el visualizador con dos textos */
-        .contenedor-textos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            height: 100%;
-        }
-
-        .texto-artista,
-        .texto-prenda {
-            text-align: center;
-            font-weight: bold;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .texto-artista {
-            font-size: 24px;
-        }
-
-        .texto-prenda {
-            font-size: 18px;
-        }
-    </style>
 </head>
 
 <body>
     <!-- Encabezado -->
     <header class="encabezado">
         <div class="contenedor contenido-encabezado">
-            <a href="../../index.html">
-                <img src="../images/logo_blanco.png" alt="Logo" class="imagen_logo" width="200" />
-            </a>
+    <a href="../../index.html">
+        <img src="../images/logo_blanco.png" alt="Logo" class="imagen_logo" width="200" />
+    </a>
             <div class="barra-busqueda">
                 <input type="text" placeholder="Buscar eventos, conciertos, conferencias..." />
                 <button><i class="fas fa-search"></i></button>
@@ -60,36 +32,16 @@
     <nav class="navegacion">
         <div class="contenedor contenedor-navegacion">
             <ul class="navegacion-principal">
-                <li>
-                    <div><a href="../../index.html">TODO</a></div>
-                </li>
-                <li>
-                    <div><a href="#">MÚSICA</a></div>
-                </li>
-                <li>
-                    <div><a href="#">DEPORTES</a></div>
-                </li>
-                <li>
-                    <div><a href="eventos.html">EVENTOS</a></div>
-                </li>
-                <li class="activo">
-                    <div><a href="armario.html">ARMARIO</a></div>
-                </li>
-                <li>
-                    <div><a href="#">EMPRESAS</a></div>
-                </li>
-                <li>
-                    <div><a href="#">DISEÑADORES</a></div>
-                </li>
-                <li>
-                    <div><a href="#">INFLUENCERS</a></div>
-                </li>
-                <li>
-                    <div><a href="#">POKER</a></div>
-                </li>
-                <li>
-                    <div><a href="#">NOVEDADES</a></div>
-                </li>
+                <li><a href="../../index.html">TODO</a></li>
+                <li><a href="#">MÚSICA</a></li>
+                <li><a href="#">DEPORTES</a></li>
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li class="activo"><a href="armario.html">ARMARIO</a></li>
+                <li><a href="#">EMPRESAS</a></li>
+                <li><a href="#">DISEÑADORES</a></li>
+                <li><a href="#">INFLUENCERS</a></li>
+                <li><a href="#">POKER</a></li>
+                <li><a href="#">NOVEDADES</a></li>
             </ul>
             <div class="acciones-navegacion">
                 <button class="btn-filtrar"><i class="fas fa-filter"></i> Filtrar</button>
@@ -130,7 +82,7 @@
                 <!-- Prenda 1 -->
                 <div class="tarjeta-evento">
                     <div class="imagen-evento" style="background-image: url(../images/footer.jpg);">
-
+                        
                     </div>
                     <div class="contenido-evento">
                         <h3>Arkas Hole</h3>
@@ -185,7 +137,7 @@
         <div class="contenido-modal-prenda">
             <span class="cerrar-modal" id="cerrarModalPrenda">&times;</span>
             <h2 class="titulo-modal-prenda">DISEÑA TU PRENDA</h2>
-
+    
             <!-- Encabezado con nombre del artista y prenda -->
             <div class="encabezado-diseño">
                 <div class="campo-nombre">
@@ -196,10 +148,10 @@
                 <div class="campo-nombre">
                     <label for="nombrePrenda">Nombre de la Prenda</label>
                     <input type="text" id="nombrePrenda" class="entrada-texto" placeholder="Nombre de la prenda"
-                        value="Edición Especial 2026">
-                </div>
+                        value="Edición Especial">
+                </div>  
             </div>
-
+    
             <!-- Selector de Tipo de Prenda -->
             <div class="seccion-tipo-prenda">
                 <h3>Tipo de Prenda</h3>
@@ -221,43 +173,40 @@
                     </div>
                 </div>
             </div>
-
+    
             <!-- Visualizador central de la prenda -->
             <div class="contenedor-visualizador">
                 <div class="visualizador-prenda" id="visualizadorPrenda">
-                    <div class="vista-prenda" id="vistaPrenda">
-                        <div class="contenedor-textos">
-                            <div class="texto-artista" id="textoArtista">ARKAS</div>
-                            <div class="texto-prenda" id="textoPrenda">Edición Especial 2026</div>
-                        </div>
-                    </div>
+                    <div class="vista-prenda" id="vistaPrenda"></div>
+                    <div class="texto-ejemplo" id="textoEjemplo">ARKAS</div>
                 </div>
                 <div class="selectores-color">
                     <div class="grupo-selector-color">
                         <label>Color 1</label>
-                        <input type="color" id="selectorColor1" value="#000000">
+                        <input type="color" id="selectorColor1" value="#1a2a6c">
                     </div>
                     <div class="grupo-selector-color">
                         <label>Color 2</label>
-                        <input type="color" id="selectorColor2" value="#434e61">
+                        <input type="color" id="selectorColor2" value="#b21f1f">
                     </div>
                     <div class="grupo-selector-color">
                         <label>Color 3</label>
-                        <input type="color" id="selectorColor3" value="#000000">
+                        <input type="color" id="selectorColor3" value="#0f2027">
                     </div>
                     <div class="grupo-selector-color">
                         <label>Color 4</label>
-                        <input type="color" id="selectorColor4" value="#434e61">
+                        <input type="color" id="selectorColor4" value="#ff5f6d">
                     </div>
                 </div>
             </div>
+
             <!-- Controles inferiores -->
             <div class="controles-inferiores">
                 <!-- Columna izquierda: Colaboraciones -->
                 <div class="columna-colaboraciones">
                     <h3>Colaboraciones</h3>
-
-                    <div class="control-colaboracion seccion-tipo-prenda">
+    
+                    <div class="control-colaboracion">
                         <label>Artista</label>
                         <div class="selector-con-boton">
                             <div id="artistaSeleccionado" class="elemento-seleccionado">
@@ -266,8 +215,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="control-colaboracion seccion-tipo-prenda">
+    
+                    <div class="control-colaboracion">
                         <label>Marca</label>
                         <div class="selector-con-boton">
                             <div id="marcaSeleccionada" class="elemento-seleccionado">
@@ -276,8 +225,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="control-colaboracion seccion-tipo-prenda">
+    
+                    <div class="control-colaboracion">
                         <label>Diseñador</label>
                         <div class="selector-con-boton">
                             <div id="disenadorSeleccionado" class="elemento-seleccionado">
@@ -287,11 +236,11 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <!-- Columna derecha: Controles de texto -->
                 <div class="columna-controles-texto">
                     <h3>Personalizar Texto</h3>
-
+    
                     <div class="control-grupo">
                         <label for="selectorTipografia">Tipografía</label>
                         <select class="selector-opcion" id="selectorTipografia">
@@ -299,37 +248,23 @@
                             <option value="'Times New Roman', Times, serif">Clásica</option>
                             <option value="'Arial Black', Gadget, sans-serif">Urbana</option>
                             <option value="'Georgia', serif">Elegante</option>
-                            <option value="'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif">Graffiti
-                            </option>
-                            <option
-                                value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
-                                Futurista</option>
+                            <option value="'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif">Graffiti</option>
+                            <option value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Futurista</option>
                         </select>
                     </div>
-
+    
                     <div class="control-grupo">
                         <label for="selectorColorTexto">Color del Texto</label>
                         <input type="color" id="selectorColorTexto" value="#000000">
                     </div>
-
+    
                     <div class="control-grupo">
-                        <label for="controlTamanioTexto">Tamaño de Letra: <span
-                                id="valorTamanioTexto">24px</span></label>
+                        <label for="controlTamanioTexto">Tamaño de Letra: <span id="valorTamanioTexto">24px</span></label>
                         <input type="range" id="controlTamanioTexto" min="12" max="48" value="24">
-                    </div>
-
-                    <!-- Precio -->
-                    <div class="control-grupo">
-                        <h3>Precio</h3>
-                        <label for="muestraprecio">Precio de la prenda: (€)
-                            <input type="text" placeholder="19,99" id="muestraprecio"
-                                style="border: 0px; font-size: 32px;">
-                        </label>
-                        <input type="range" id="valorPrecio" min="15" max="100" step="0.01" value="19.99">
                     </div>
                 </div>
             </div>
-
+    
             <!-- Sección de imágenes -->
             <div class="seccion-imagenes">
                 <h3>Añade Imágenes a tu Diseño</h3>
@@ -348,14 +283,13 @@
                     </div>
                 </div>
             </div>
-
+    
             <!-- Cuadro de notas -->
             <div class="seccion-notas">
                 <h3>Notas del Diseño</h3>
-                <textarea placeholder="Añade notas sobre tu diseño, ideas o especificaciones..."
-                    id="areaNotas"></textarea>
+                <textarea placeholder="Añade notas sobre tu diseño, ideas o especificaciones..." id="areaNotas"></textarea>
             </div>
-
+    
             <!-- Botones de acción centrados -->
             <div class="acciones-finales">
                 <button class="btn-guardar-grande">GUARDAR DISEÑO</button>
@@ -363,7 +297,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Modales de búsqueda (se mantienen igual) -->
     <div class="modal-busqueda" id="modalArtistas">
         <div class="contenido-modal-busqueda">
@@ -377,7 +311,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="modal-busqueda" id="modalMarcas">
         <div class="contenido-modal-busqueda">
             <span class="cerrar-modal" id="cerrarModalMarcas">&times;</span>
@@ -390,7 +324,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="modal-busqueda" id="modalDisenadores">
         <div class="contenido-modal-busqueda">
             <span class="cerrar-modal" id="cerrarModalDisenadores">&times;</span>
@@ -439,8 +373,8 @@
             </div>
         </div>
     </footer>
-    <script src="../js/armario.js"></script> 
-    <script src="../js/script.js"></script> 
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
