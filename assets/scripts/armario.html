@@ -186,20 +186,6 @@
             <span class="cerrar-modal" id="cerrarModalPrenda">&times;</span>
             <h2 class="titulo-modal-prenda">DISEÑA TU PRENDA</h2>
 
-            <!-- Encabezado con nombre del artista y prenda -->
-            <div class="encabezado-diseño">
-                <div class="campo-nombre">
-                    <label for="nombreArtista">Nombre del Artista</label>
-                    <input type="text" id="nombreArtista" class="entrada-texto" placeholder="Nombre del artista"
-                        value="ARKAS">
-                </div>
-                <div class="campo-nombre">
-                    <label for="nombrePrenda">Nombre de la Prenda</label>
-                    <input type="text" id="nombrePrenda" class="entrada-texto" placeholder="Nombre de la prenda"
-                        value="Edición Especial 2026">
-                </div>
-            </div>
-
             <!-- Selector de Tipo de Prenda -->
             <div class="seccion-tipo-prenda">
                 <h3>Tipo de Prenda</h3>
@@ -224,6 +210,10 @@
 
             <!-- Visualizador central de la prenda -->
             <div class="contenedor-visualizador">
+                <div>
+                    <label>Random</label>
+                    <input type="button" id="botonRandomPrenda">
+                </div>
                 <div class="visualizador-prenda" id="visualizadorPrenda">
                     <div class="vista-prenda" id="vistaPrenda">
                         <div class="contenedor-textos">
@@ -251,6 +241,56 @@
                     </div>
                 </div>
             </div>
+            <!-- Columna derecha: Controles de texto -->
+            <div class="columna-controles-texto">
+                <h3>Personalizar Texto</h3>
+            <!-- Encabezado con nombre del artista y prenda -->
+            <div class="encabezado-diseño">
+                <div class="campo-nombre">
+                    <label for="nombreArtista">Nombre en la prenda</label>
+                    <input type="text" id="nombreArtista" class="entrada-texto" placeholder="Nombre del artista" value="ARKAS">
+                </div>
+                <div class="campo-nombre">
+                    <label for="nombrePrenda">Nombre de la Prenda</label>
+                    <input type="text" id="nombrePrenda" class="entrada-texto" placeholder="Nombre de la prenda"
+                        value="Edición Especial 2026">
+                </div>
+            </div>
+
+                <div class="control-grupo">
+                    <label for="selectorTipografia">Tipografía</label>
+                    <select class="selector-opcion" id="selectorTipografia">
+                        <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Moderna</option>
+                        <option value="'Times New Roman', Times, serif">Clásica</option>
+                        <option value="'Arial Black', Gadget, sans-serif">Urbana</option>
+                        <option value="'Georgia', serif">Elegante</option>
+                        <option value="'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif">Graffiti
+                        </option>
+                        <option value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+                            Futurista</option>
+                    </select>
+                </div>
+            
+                <div class="control-grupo">
+                    <label for="selectorColorTexto">Color del Texto</label>
+                    <input type="color" id="selectorColorTexto" value="#000000">
+                </div>
+            
+                <div class="control-grupo">
+                    <label for="controlTamanioTexto">Tamaño de Letra: <span id="valorTamanioTexto">24px</span></label>
+                    <input type="range" id="controlTamanioTexto" min="12" max="48" value="24">
+                </div>
+            
+                <!-- Precio -->
+                <div class="control-grupo">
+                    <h3>Precio</h3>
+                    <label for="muestraprecio">Precio de la prenda: (€)
+                        <input type="text" placeholder="19,99" id="muestraprecio" style="border: 0px; font-size: 32px;">
+                    </label>
+                    <input type="range" id="valorPrecio" min="15" max="100" step="0.01" value="19.99">
+                </div>
+            </div>
+
             <!-- Controles inferiores -->
             <div class="controles-inferiores">
                 <!-- Columna izquierda: Colaboraciones -->
@@ -285,47 +325,6 @@
                                 <button type="button" class="btn-buscar" id="btnBuscarDisenador">+</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Columna derecha: Controles de texto -->
-                <div class="columna-controles-texto">
-                    <h3>Personalizar Texto</h3>
-
-                    <div class="control-grupo">
-                        <label for="selectorTipografia">Tipografía</label>
-                        <select class="selector-opcion" id="selectorTipografia">
-                            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Moderna</option>
-                            <option value="'Times New Roman', Times, serif">Clásica</option>
-                            <option value="'Arial Black', Gadget, sans-serif">Urbana</option>
-                            <option value="'Georgia', serif">Elegante</option>
-                            <option value="'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif">Graffiti
-                            </option>
-                            <option
-                                value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
-                                Futurista</option>
-                        </select>
-                    </div>
-
-                    <div class="control-grupo">
-                        <label for="selectorColorTexto">Color del Texto</label>
-                        <input type="color" id="selectorColorTexto" value="#000000">
-                    </div>
-
-                    <div class="control-grupo">
-                        <label for="controlTamanioTexto">Tamaño de Letra: <span
-                                id="valorTamanioTexto">24px</span></label>
-                        <input type="range" id="controlTamanioTexto" min="12" max="48" value="24">
-                    </div>
-
-                    <!-- Precio -->
-                    <div class="control-grupo">
-                        <h3>Precio</h3>
-                        <label for="muestraprecio">Precio de la prenda: (€)
-                            <input type="text" placeholder="19,99" id="muestraprecio"
-                                style="border: 0px; font-size: 32px;">
-                        </label>
-                        <input type="range" id="valorPrecio" min="15" max="100" step="0.01" value="19.99">
                     </div>
                 </div>
             </div>

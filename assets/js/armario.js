@@ -468,4 +468,10 @@ document.addEventListener('DOMContentLoaded', function() {
     actualizarDegradado();
     actualizarTexto();
     actualizarPrecioTotal();
+    
+    const botonrandomprenda = document.getElementById('botonRandomPrenda')
+
+    if (botonrandomprenda) {
+        //Hacer codigo
+    }
 });
