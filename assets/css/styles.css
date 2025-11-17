@@ -3,7 +3,7 @@
 
 /* Si lees esto, este es el bueno */
 :root {
-  --color-primario: linear-gradient(135deg, #000000, #434e61, #000000, #434e61);
+  --color-primario: linear-gradient(145deg, #434e61, #000000, #434e61, #000000);
   --color-oscuro: #4c493c;
   --color-soporte: #fff5cb;
   --color-fondo: #f4f0e8;
@@ -981,6 +981,9 @@ body {
 /* ========== PIE DE PÁGINA ========== */
 .pie-pagina {
   background: var(--color-primario);
+  background-attachment: fixed;   /* El fondo se queda fijo */
+  background-size: cover;         /* Ajusta el fondo al tamaño */
+  background-position: center;    /* Centra la imagen/fondo */
   color: white;
   padding: 60px 0 20px;
 }
