@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARKAS - Editar Perfil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <div class="contenedor contenido-encabezado">
+      <a href="index.html">
+        <img src="../images/logo_blanco.png" alt="Logo" class="imagen_logo" width="200" />
+      </a>
+
+      <div class="barra-busqueda">
+        <input type="text" placeholder="Buscar productos, artistas, eventos..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="acciones-usuario">
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#"><i class="fas fa-heart"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegación -->
+  <nav class="navegacion">
+    <div class="contenedor contenedor-navegacion">
+      <ul class="navegacion-principal">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="#">MUSICA</a></li>
+        <li class="activo"><a href="perfil_clientes.html">PERFIL</a></li>
+        <li><a href="eventos.html">EVENTOS</a></li>
+        <li><a href="armario.html">ARMARIO</a></li>
+        <li><a href="#">EMPRESAS</a></li>
+        <li><a href="#">DISEÑADORES</a></li>
+        <li><a href="#">INFLUENCERS</a></li>
+        <li><a href="#">POKER</a></li>
+        <li><a href="#">NOVEDADES</a></li>
+      </ul>
+      <div class="acciones-navegacion">
+        <button class="btn-filtrar">
+          <i class="fas fa-filter"></i> Filtrar
+        </button>
+        <button class="btn-ordenar"><i class="fas fa-sort"></i> Ordenar</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <div class="contenedor-perfil">
+      <!-- Sidebar de perfil -->
+      <aside class="sidebar-perfil">
+        <div class="info-usuario">
+          <div class="avatar-usuario">
+            <i class="fas fa-user"></i>
+            <div class="cambiar-avatar">Cambiar</div>
+          </div>
+          <div class="nombre-usuario">Carlos Rodríguez</div>
+          <div class="email-usuario">carlos@ejemplo.com</div>
+        </div>
+        
+        <ul class="menu-perfil">
+          <li><a href="#" class="activo"><i class="fas fa-user-edit"></i> Información Personal</a></li>
+          <li><a href="#"><i class="fas fa-shopping-bag"></i> Mis Pedidos</a></li>
+          <li><a href="#"><i class="fas fa-heart"></i> Favoritos</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Direcciones</a></li>
+          <li><a href="#"><i class="fas fa-bell"></i> Notificaciones</a></li>
+          <li><a href="#"><i class="fas fa-lock"></i> Seguridad</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+        </ul>
+      </aside>
+      
+      <!-- Contenido de perfil -->
+      <div class="contenido-perfil">
+        <div class="encabezado-perfil">
+          <h1 class="titulo-perfil">Editar Perfil</h1>
+          <button class="btn-guardar-perfil">Guardar Cambios</button>
+        </div>
+        
+        <!-- Información Personal -->
+        <section class="seccion-perfil">
+          <h2 class="seccion-titulo">Información Personal</h2>
+          <div class="formulario-perfil">
+            <div class="campo-formulario">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" value="Carlos">
+            </div>
+            <div class="campo-formulario">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" value="Rodríguez">
+            </div>
+            <div class="campo-formulario">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" value="carlos@ejemplo.com">
+            </div>
+            <div class="campo-formulario">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" value="+34 612 345 678">
+            </div>
+            <div class="campo-formulario">
+              <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+              <input type="date" id="fecha-nacimiento" value="1990-05-15">
+            </div>
+            <div class="campo-formulario">
+              <label for="genero">Género</label>
+              <select id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                <option value="prefiero-no-decir">Prefiero no decir</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Preferencias -->
+        <section class="seccion-perfil">
+          <h2 class="seccion-titulo">Mis Preferencias</h2>
+          <div class="preferencias-grid">
+            <div class="tarjeta-preferencia activa">
+              <div class="icono-preferencia"><i class="fas fa-music"></i></div>
+              <h3>Música</h3>
+            </div>
+            <div class="tarjeta-preferencia">
+              <div class="icono-preferencia"><i class="fas fa-futbol"></i></div>
+              <h3>Deportes</h3>
+            </div>
+            <div class="tarjeta-preferencia activa">
+              <div class="icono-preferencia"><i class="fas fa-calendar-alt"></i></div>
+              <h3>Eventos</h3>
+            </div>
+            <div class="tarjeta-preferencia">
+              <div class="icono-preferencia"><i class="fas fa-tshirt"></i></div>
+              <h3>Moda</h3>
+            </div>
+            <div class="tarjeta-preferencia">
+              <div class="icono-preferencia"><i class="fas fa-palette"></i></div>
+              <h3>Arte</h3>
+            </div>
+            <div class="tarjeta-preferencia">
+              <div class="icono-preferencia"><i class="fas fa-gamepad"></i></div>
+              <h3>Gaming</h3>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Dirección -->
+        <section class="seccion-perfil">
+          <h2 class="seccion-titulo">Dirección de Envío</h2>
+          <div class="formulario-perfil">
+            <div class="campo-formulario full-width">
+              <label for="direccion">Dirección</label>
+              <input type="text" id="direccion" value="Calle Principal 123">
+            </div>
+            <div class="campo-formulario">
+              <label for="ciudad">Ciudad</label>
+              <input type="text" id="ciudad" value="Madrid">
+            </div>
+            <div class="campo-formulario">
+              <label for="codigo-postal">Código Postal</label>
+              <input type="text" id="codigo-postal" value="28001">
+            </div>
+            <div class="campo-formulario">
+              <label for="pais">País</label>
+              <select id="pais">
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+                <option value="it">Italia</option>
+                <option value="pt">Portugal</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Historial de Pedidos -->
+        <section class="seccion-perfil">
+          <h2 class="seccion-titulo">Historial de Pedidos</h2>
+          <div class="historial-grid">
+            <div class="tarjeta-historial">
+              <div class="imagen-historial" style="background-image: url('https://images.unsplash.com/photo-1588099768531-a72d4a198538?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80');"></div>
+              <div class="contenido-historial">
+                <h3 class="titulo-historial">Camiseta GINSENG</h3>
+                <div class="fecha-historial">15 Mar 2025</div>
+                <div class="estado-historial estado-entregado">Entregado</div>
+              </div>
+            </div>
+            
+            <div class="tarjeta-historial">
+              <div class="imagen-historial" style="background-image: url('https://images.unsplash.com/photo-1588580000645-4562a6d2c839?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
+              <div class="contenido-historial">
+                <h3 class="titulo-historial">Gorra ARKAS</h3>
+                <div class="fecha-historial">10 Mar 2025</div>
+                <div class="estado-historial estado-proceso">En proceso</div>
+              </div>
+            </div>
+            
+            <div class="tarjeta-historial">
+              <div class="imagen-historial" style="background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=1112&q=80');"></div>
+              <div class="contenido-historial">
+                <h3 class="titulo-historial">Zapatillas Urban</h3>
+                <div class="fecha-historial">5 Mar 2025</div>
+                <div class="estado-historial estado-pendiente">Pendiente</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="contenido-pie">
+        <div class="columna-pie">
+          <h3>ARKAS</h3>
+          <p>
+            Tu destino para moda, música, deportes y eventos exclusivos.
+            Conectamos a los fans con sus pasiones.
+          </p>
+          <div class="iconos-sociales">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="columna-pie">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="#">Música</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="#">Empresas</a></li>
+            <li><a href="#">Diseñadores</a></li>
+          </ul>
+        </div>
+        <div class="columna-pie">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Filtrar</a></li>
+            <li><a href="#">Ordenar</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="columna-pie">
+          <h3>Contacto</h3>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Calle Principal 123,
+              Ciudad
+            </li>
+            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+            <li><i class="fas fa-envelope"></i> info@arkas.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="derechos-autor">
+        <p>&copy; 2025 ARKAS. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="perfil_clientes.js"></script>
+</body>
+</html>
