@@ -2,10 +2,10 @@
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-$db_server = "192.168.101.80";
+$db_server = "localhost";
 $db_user = "root";
 $db_pass = "";
-$db_name = "testing";
+$db_name = "arkas";
 
 $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
 
@@ -14,8 +14,11 @@ if (!$conn) {
     exit;
 }
 
-// Direct query to productos table
-$result = mysqli_query($conn, "SELECT * FROM productos");
+// ---------------------------------------------------------^^^^^^^^---------------------------------- This is the part that makes the connection
+// --------------------------------------------------------vvvvvvv------------------------------------ These are the queries
+
+// Extract products
+$result = mysqli_query($conn, "SELECT product.name, product.description, product.price FROM product"); // We take only the user side data from the table
 
 if ($result === false) {
     // If query fails, show the error

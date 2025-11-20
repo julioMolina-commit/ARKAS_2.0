@@ -18,11 +18,11 @@
                     container.innerHTML = products.map(product => {
                         const name = product.NOMBRE || product.name || product.nombre || 'No Name';
                         const price = product.PRECIO || product.price || product.precio || '0';
-                        const stock = product.EXISTENCIAS || product.stock || product.existencias || '0';
+                        const description = product.decripcion || product.description || product.desc || '0';
                         
                         return `<div style="border: 1px solid #ccc; padding: 10px; margin: 5px;">
                             <strong>${name}</strong> - $${price}
-                            <br>Stock: ${stock}
+                            <br>Stock: ${description}
                          </div>`;
                     }).join('');
                 } else {
